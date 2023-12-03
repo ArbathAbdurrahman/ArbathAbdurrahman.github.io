@@ -1,0 +1,24 @@
+footer {
+  min-height: 100px;
+}
+
+.jumbotron {
+  padding-top: 4rem;
+  background-color: #e2edff;
+}
+
+#about {
+  padding-top: 4rem;
+}
+#project {
+  padding-top: 4rem;
+}
+#contact {
+  padding-top: 4rem;
+  background-color: #e2edff;
+}
+
+/* bisa juga pakai css dibawah */
+/* section{
+  padding-top: 4rem;
+} */
