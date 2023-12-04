@@ -135,24 +135,24 @@
             <h5>Contact Me</h5>
           </div>
         </div>
-        <form class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nama</label>
-              <input type="name" class="form-control" id="name" />
+          <form class="row justify-content-center" name='Project-tak-berjudul'>
+            <div class="col-md-8">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="name" class="form-control" id="name" 
+                aria-describedby="name" name="nama"/>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email Anda</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailAnda" name="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary mb-3">Submit</button>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email Anda</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-            </div>
-
-            <div class="mb-3">
-              <label for="pesan" class="form-label">Pesan</label>
-              <textarea class="form-control" id="pesan" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-          </div>
-        </form>
+          </form>
       </div>
     </section>
     <!-- akhir contact -->
@@ -163,5 +163,16 @@
     </footer>
     <!-- akhir footer -->
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbygkc2HYvrjYxW5DgioJNiBte4NIoFJSfzL77HvTS2nWnZuNRZggOj4U7SoUD2ogTO-nw/exec'
+      const form = document.forms['Project-tak-berjudul']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
