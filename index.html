@@ -7,6 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- AOV -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- my css -->
     <link rel="stylesheet" href="style.css" />
 
     <title>ArbathAbdurrahman</title>
@@ -24,11 +27,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#project">Project</a>
+            <li class="nav-item" >
+              <a class="nav-link" href="#project">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">contact</a>
@@ -67,14 +70,14 @@
 
     <!-- About -->
     <section id="about">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="row text-center">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row">
-          <p>
+          <p class="tentangku">
             "Enthusiastic and eager Informatics Engineering student exploring the Informatics world. Currently pursuing a bachelor degree at Sunan Kalijaga State University.I have a particular interest in Cyber Security and am seeking opportunities to gain practical experience in the field. My desire to learn and grow extends beyond the academic scope, involving hands-on exploration in the real world.
             I am open to internship opportunities, collaborative projects, or discussions with you. I believe that continuous collaboration and learning are key to personal development in this ever-evolving world.If you have advice, opportunities, or simply want to share experiences, I would be delighted to hear from you."            
           </p>
@@ -85,14 +88,14 @@
 
     <!-- project -->
     <section id="project">
-      <div class="container">
-        <div class="row text-center mb-3">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row text-center mb-4">
           <div class="col">
-            <h2>My Project</h2>
+            <h2>My Projects</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="card">
               <img src="img/github.png" class="card-img-top" alt="github" />
               <div class="card-body">
@@ -100,7 +103,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="card">
               <img src="img/linkedln.png" class="card-img-top" alt="linkedln" />
               <div class="card-body">
@@ -108,7 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="card">
               <img src="img/instagram.png" class="card-img-top" alt="instagram" />
               <div class="card-body">
@@ -144,15 +147,15 @@
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
                 <input type="name" class="form-control" id="name" 
-                aria-describedby="name" name="nama"/>
+                aria-describedby="name" name="nama" required/>
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email Anda</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailAnda" name="email" />
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailAnda" name="email" placeholder="name@example.com"/>
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan" placeholder="ketik pesan..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-kirim mb-3">Submit</button>
               <button class="btn btn-primary btn-loading mb-3 d-none" type="button" disabled>
@@ -171,6 +174,14 @@
     </footer>
     <!-- akhir footer -->
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- js AOV -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <!-- menghubungkan ke google spreadsheed -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbygkc2HYvrjYxW5DgioJNiBte4NIoFJSfzL77HvTS2nWnZuNRZggOj4U7SoUD2ogTO-nw/exec'
       const form = document.forms['Project-tak-berjudul']
