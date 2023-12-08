@@ -7,6 +7,12 @@ footer {
   background-color: #e2edff;
 }
 
+.profile {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* .font-arbath {
   text-align: left;
 } */
